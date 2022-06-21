@@ -1,4 +1,3 @@
-from this import d
 from django.db import models
 from django.utils import timezone
 from django.urls import reverse
@@ -22,7 +21,6 @@ class ToDoList(models.Model):
     
 class ToDoItem(models.Model):
     title = models.CharField(max_length=100)
-    #description = models.TextField(null=True, blank=True)
     description = models.TextField(blank=True)
     created_date = models.DateTimeField(auto_now_add=True)
     due_date = models.DateTimeField(default=one_week_hence)
